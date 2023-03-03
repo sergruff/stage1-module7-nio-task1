@@ -29,10 +29,6 @@ public class FileReader {
             log.info(ex.getMessage() + " IO exception");
         }
         String[] contents = builder.toString().split("\n");
-        for (String s :
-                contents) {
-            System.out.println(s);
-        }
         return new Profile(contents[0].substring(6).strip(),
                 Integer.parseInt(contents[1].substring(5).strip()),
                 contents[2].substring(7).strip(),
